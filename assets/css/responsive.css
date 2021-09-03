@@ -15,10 +15,6 @@
         padding: 13px;
     }
     
-    #nav li a {
-        display: block;
-        padding: 1px 24px;
-    }
     .footer .footer-text a {
         display: inline-block;
         padding: 8px 0px;
@@ -82,7 +78,12 @@
         display: block;
         position: relative;
     }
-    
+    #nav li a {
+        display: block;
+        padding-right: 78%;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
     #nav > li:first-child{
         display: inline-block;
     }

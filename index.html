@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W3d_The Band</title>
+    <title>The Band</title>
     <link rel="icon" href="./assets/img/LOGO1.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/stype.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -23,10 +23,10 @@
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
-                    <ul class="subnav">
-                        <li><a href="#">Merchandise</a></li>
-                        <li><a href="#">Extras</a></li>
-                        <li><a href="#">Media</a></li>
+                    <ul id="more-menu" class="subnav">
+                        <li><a href="https://www.facebook.com/lequanghai64">Merchandise</a></li>
+                        <li><a href="https://www.facebook.com/lequanghai64">Extras</a></li>
+                        <li><a href="https://www.facebook.com/lequanghai64">Media</a></li>
                     </ul>
                 </li>
 
@@ -122,8 +122,8 @@
                 <div class="row contact-content">
                     <div class="col col-half s-col-full contact-text">
                         <p><i class="ti-location-pin form-icon"></i>Chicago, US</p>
-                        <p><i class="ti-mobile form-icon"></i>Phone: <a href="tel:+00 151515">+00 151515</a></p>
-                        <p><i class="ti-email form-icon"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
+                        <p><i class="ti-mobile form-icon"></i>Phone: <a href="tel:012345678">012345678</a></p>
+                        <p><i class="ti-email form-icon"></i>Email: <a href="mailto:hakaishin@gmail.com">hakaishin@gmail.com</a></p>
 
                     </div>
                     <div class="col col-half s-col-full">
@@ -153,14 +153,14 @@
         </div>
         <div class="footer">
            <div class="socials-list">
-               <a href="#"><i class="footer-icon ti-facebook"></i></a>
-               <a href="#"><i class="footer-icon ti-instagram"></i></a>
-               <a href="#"><i class="footer-icon ti-youtube"></i></a>
-               <a href="#"><i class="footer-icon ti-pinterest"></i></a>
-               <a href="#"><i class="footer-icon ti-twitter-alt"></i></a>
-               <a href="#"><i class="footer-icon ti-linkedin"></i></a>
+               <a href="https://www.facebook.com/lequanghai64"><i class="footer-icon ti-facebook"></i></a>
+               <a href="https://www.facebook.com/lequanghai64"><i class="footer-icon ti-instagram"></i></a>
+               <a href="https://www.facebook.com/lequanghai64"><i class="footer-icon ti-youtube"></i></a>
+               <a href="https://www.facebook.com/lequanghai64"><i class="footer-icon ti-pinterest"></i></a>
+               <a href="https://www.facebook.com/lequanghai64"><i class="footer-icon ti-twitter-alt"></i></a>
+               <a href="https://www.facebook.com/lequanghai64"><i class="footer-icon ti-linkedin"></i></a>
            </div>
-           <p class="footer-text">Powered by <a href="#">w3.css</a></p>
+           <p class="footer-text">Powered by <a href="https://www.facebook.com/lequanghai64">w3.css</a></p>
         </div>
     </div>
 
@@ -193,7 +193,7 @@
             <footer class="model-footer">
                 <p class="model-need-help">
                     Need 
-                    <a href="#" class="model-help">help?</a>
+                    <a href="https://www.facebook.com/lequanghai64" class="model-help">help?</a>
                 </p>
             </footer>
         </div>
@@ -235,15 +235,18 @@
 
         //Tự động đóng khi chọn menu
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        var more = document.getElementById('more-menu');
         for(var i = 0; i < menuItems.length; i++) {
             var menuItem = menuItems[i];
             menuItem.onclick = function(event) {
             var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
 
-                if(!isParentMenu) {
-                    header.style.height = null;
-                } else {
+                if(isParentMenu) {
+                    more.classList.remove('close-more');
                     event.preventDefault();
+                } else {
+                    header.style.height = null;
+                    more.classList.add('close-more');
                 }
             }
         }
