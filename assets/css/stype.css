@@ -1,0 +1,498 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Common */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.pull-right {
+    float: right;
+}
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float:left;
+    padding: 0px 8px;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+/* Main */
+
+.clear {
+    clear: both;
+}
+
+#header{
+    background-color: black;
+    width: 100%;
+    height: 46px;
+    position: fixed;
+    top : 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav > li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav .nav-arrow-down {
+    font-size: 12px;
+}
+
+#nav > li:hover > a {
+    background-color: #ccc;
+    color: #000;
+    display: inline-block;
+}
+
+#nav>li> a{
+    color: white;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    text-transform: uppercase;
+}
+#nav .subnav{
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0px;
+    min-width: 160px;
+    list-style-type: none;
+    box-shadow: 0px 0px 5px #333;
+    display: none;
+}
+#nav .subnav a {
+    color: black;
+    text-decoration: none;
+    line-height: 38px;
+    padding: 0 12px;
+}
+
+#nav > li:hover > .subnav {
+    display: block;
+}
+
+#nav .subnav li:hover a {
+    background-color: #ccc;
+    color: black;
+    line-height: 38px;
+    display: block;
+}
+
+#header .icon-menu,
+#header .icon-search {
+    float :right;
+    color: white;
+    line-height: 46px;
+    padding: 0 21px;
+    font-size: 20px;
+    
+}
+#header .icon-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .icon-menu:hover {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+#header .icon-search:hover {
+    background-color: tomato;
+    cursor: pointer;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background-color: aquamarine;
+    background: url("../img/slide1/chicago.jpg") top center / cover no-repeat;
+
+}
+
+#slider .text-content {
+    color: white;
+    position: absolute;
+    bottom: 47px;
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-content .text-header {
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 0 0 1px black;
+}
+
+#slider .text-content .text-p {
+    font-size: 15px;
+    margin-top: 25px;
+    text-shadow: 0 0 1px black;
+}
+
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+#content .content-section .content-header,
+#content .content-section .content-sub-header {
+    text-align: center;
+}
+
+#content .content-section .content-header {
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin: 10px 0px;
+}
+
+#content .content-section .content-sub-header {
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    opacity: 0.6;
+    margin: 15px 0px;
+}
+
+#content .content-section .about-text {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5;
+    margin: 15px 0px;
+}
+
+#content .member-list {
+    padding: 32px 0px;
+    display: block;
+}
+
+#content .member-name {
+    font-size: 15px;
+    margin: 15px 0px;
+}
+
+#content .member-img {
+    width: 154px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.tour-section {
+    background-color: #000;
+}
+
+.tour-section .list-item {
+    margin-bottom: 16px;
+}
+
+.tour-section .ticket-list {
+    background-color: #fff;
+    list-style: none;
+    padding-top: 16px;
+}
+
+.ticket-list li {
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+    padding: 11px 16px;
+}
+
+.tour-section .sold-out {
+    width: 54px;
+    height: 22px;
+    background-color: #f44336;
+    color: white;
+    padding: 2px 10px;
+    margin-left: 16px;
+}
+
+.ticket-list .quantity {
+    float: right;
+    background-color: black;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    line-height: 24px;
+    text-align: center;
+    margin-top: -2px;
+}
+
+.place-list {
+    font-size: 15px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-body {
+    background-color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: block;
+}
+
+.place-header {
+    font-size: 15px;
+    padding: 15px 0px;
+}
+
+.place-time {
+    padding-bottom: 15px;
+    color: #757575;
+}
+
+.place-item .dcs {
+    line-height: 1.4;
+    padding-bottom: 15px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 11px 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.model {
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.model-contain {
+    width: 900px;
+    max-width: calc(100% - 32px);
+    background: white;
+    min-height: 200px;
+    position: relative;
+    animation: modalHideShow ease 0.4s;
+}
+
+.model-header {
+    background: #009688;
+    font-size: 30px;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    display: flex;
+}
+
+.model-heading-icon {
+    margin-right: 16px;
+}
+
+.model-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+}
+.model-close:hover {
+    background: tomato;
+}
+
+.model-body {
+    padding: 16px;
+}
+
+label.model-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+input.model-input {
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+.model-body #model-buy-btn{
+    background: #009688;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    border: none;
+    padding: 17px 0px;
+    cursor: pointer;
+}
+
+.model-body #model-buy-btn:hover{
+    opacity: 0.8;
+}
+
+.model-footer {
+    padding: 16px;
+    text-align: right;
+    font-size: 15px;
+}
+
+.model-help {
+    color: blue;
+}
+
+.model.open {
+    display: flex;
+}
+@keyframes modalHideShow {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.content-section .contact-content {
+    padding: 32px 0px;
+}
+
+.content-section .contact-text {
+    font-size: 18px;
+    margin-top: 8px;
+}
+.contact-text a {
+    color: #0000ef;
+    opacity: 0.7;
+}
+.contact-text a:hover {
+    color: #0000ef;
+    opacity: 1;
+}
+
+.content-section .form-icon {
+    width: 30px;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.content-section .form-control {
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+}
+
+.content-section .contact-input {
+    float: right;
+    margin: 16px 0px;
+    font-size: 15px;
+    padding: 9px 13px;
+    background: black;
+    color: white;
+}
+
+.map-content img{
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+    padding: 64px 16px;
+}
+
+.footer .socials-list>a {
+    color: black;
+    font-size: 24px;
+    width: 24px;
+    opacity: 0.6;
+    text-decoration: none;
+}
+.footer .footer-text a:hover {
+    color: blue;
+}
+.footer .socials-list>a:hover {
+    opacity: 1;
+}
+
+.footer .footer-text {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 15px 0px;
+    opacity: 0.8;
+}
+
+.footer .footer-text a {
+    color: black;
+}
