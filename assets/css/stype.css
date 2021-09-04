@@ -83,15 +83,17 @@ html {
 #nav > li:hover > a {
     background-color: #ccc;
     color: #000;
-    display: inline-block;
+    display: block;
 }
-
-#nav>li> a{
-    color: white;
+#nav li a {
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
     display: block;
+}
+
+#nav>li>a{
+    color: white;
     text-transform: uppercase;
 }
 #nav .subnav{
@@ -106,9 +108,7 @@ html {
 }
 #nav .subnav a {
     color: black;
-    text-decoration: none;
     line-height: 38px;
-    padding: 0 12px;
 }
 
 #nav > li:hover > .subnav {
